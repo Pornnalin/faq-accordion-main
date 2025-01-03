@@ -17,6 +17,7 @@
 }
 h1 {
   font-weight: var(--fw-bolder);
+  font-size: 40px;
 }
 
 body {
