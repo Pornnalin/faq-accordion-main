@@ -41,7 +41,7 @@ body p {
   margin: 16px;
   min-height: 50vh;
   padding: 20px;
-  max-width: 800px;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
   gap: 10px;
