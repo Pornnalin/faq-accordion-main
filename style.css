@@ -1,0 +1,104 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+  --fs-p: 16px;
+  --ff-body: "Work Sans", serif;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-body);
+}
+h1 {
+  font-weight: var(--fw-bolder);
+}
+
+body {
+  background-color: var(--clr-light-pink);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: cover;
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  color: var(--clr-dark-purple);
+  letter-spacing: 0.5px;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+body p {
+  font-size: var(--fs-p);
+  color: var(--clr-grayish-purple);
+}
+.container {
+  background-color: var(--clr-white);
+  border-radius: 10px;
+  margin: 16px;
+  min-height: 50vh;
+  padding: 20px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.faqs__header {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+  padding: 10px 0;
+}
+.faqs__item {
+  border-bottom: 2px solid var(--clr-light-pink);
+  padding-bottom: 10px;
+}
+
+.faqs__item div {
+  padding: 10px 0;
+}
+.faqs__item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  filter: brightness(0.6);
+}
+.faqs__item-head p:first-child {
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark-purple);
+}
+.faqs__item-head > p:hover {
+  color: var(--clr-grayish-purple);
+}
+.faqs_anws {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  padding-right: 40px;
+}
+.faqs_anws.show {
+  max-height: 200px;
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background-size: 100%;
+  }
+}
